@@ -185,8 +185,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ALE'
-copyright = u'2022, Jiping Xin'
+project = u'FENGSim'
+copyright = u'2025, Dr. Jiping Xin'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -326,8 +326,8 @@ htmlhelp_basename = 'aledoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ale.tex', u'金属切削工艺多尺度计算架构',
-   u'肖世宏', 'manual'),
+  ('index', 'fengsim.tex', u'FENGSim',
+   u'Dr. Jiping Xin', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
