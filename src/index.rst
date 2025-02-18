@@ -34,7 +34,9 @@ User Guide是使用说明。在User Guide中，第2节介绍了3个例子的使�
   
     cd FENGSim/toolkit/CFD/openfoam
     ./install
-  
+
+OpenFOAM有两个仓库，分别是OpenFOAM-dev和ThirdParty-dev，dev可以换成版本号，例如OpenFOAM-12和ThirdParty-12。需要将OpenFOAM-dev和ThirdParty-dev保存在同一路径下，
+在OpenFOAM-dev目录下运行编译命令的同时会编译ThirdParty-dev中的第三方库。
 
 
 **********************
