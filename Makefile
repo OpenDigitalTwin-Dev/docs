@@ -1,2 +1,2 @@
 all:
-	sphinx-build -M html docs output
+	sphinx-build -M html src build
