@@ -44,6 +44,12 @@ applications里有APP开发的例子，例子里主要包括二次开发的程�
     source OpenFOAM/etc/bashrc
     echo $FOAM_INST_DIR
 
+如果要编译APP，在FENGSim/starter/openfoam/mkdir中有一个例子，运行如下命令，会发现编译生成了可执行程序Test-mkdir，运行可执行程序，创建了一个test目录。 ::
+  
+    cd FENGSim/starter/openfoam/mkdir
+    wmake
+    ./Test-mkdir
+
 **********************
 算例
 **********************
