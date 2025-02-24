@@ -44,7 +44,7 @@ applications里有APP开发的例子，例子里主要包括二次开发的程�
     source OpenFOAM/etc/bashrc
     echo $FOAM_INST_DIR
 
-如果要编译APP，在FENGSim/starter/openfoam/mkdir中有一个例子，运行如下命令，会发现编译生成了可执行程序Test-mkdir，运行可执行程序，创建了一个test目录。 ::
+如果要编译APP，在FENGSim/starter/openfoam/mkdir中有一个例子，运行如下命令，会发现在当前目录下编译生成了可执行程序Test-mkdir，运行可执行程序，在当前目录下创建了一个test目录。 ::
   
     cd FENGSim/starter/openfoam/mkdir
     wmake
@@ -54,6 +54,9 @@ applications里有APP开发的例子，例子里主要包括二次开发的程�
 算例
 **********************
 
+测试OpenFoam中的求解器，在FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/applications/路径下有两个目录，分别为modules和solvers。其中modules里是各个求解器模块，
+见User Guide中第3.5节，求解器模块会编译成链接库，例如modules/fluid模块编译后，得到FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/platforms/linux64GccDPInt32Opt/lib/libfluid.so。
+solvers里是求解器，通过solvers调用modules里的模块，见User Guide中第3.6节，求解器会编译成可执行程序，例如solvers/foamRun编译后，得到FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/platforms/linux64GccDPInt32Opt/bin/foamRun。
 
 在FENGSim/starter/openfoam/platHole目录中是一个固体算例，运行如下命令。 ::
   
