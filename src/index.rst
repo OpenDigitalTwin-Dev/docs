@@ -89,13 +89,47 @@ SU2
 文档
 **********************
 
+SU2网站为 `<https://su2code.github.io/docs_v7/home/>`_ 。在网站Docs菜单中的Build From Source里介绍了编译操作，在Quick Start中给出了一个示范例子。
+
 **********************
 编译和安装
 **********************
 
+按照如下操作在FENGSim中编译SU2，如果已经克隆了FENGSim和CFD，请忽略前两步。
+
+* 首先克隆FENGSim。 ::
+  
+    git clone https://github.com/OpenDigitalTwin-Dev/FENGSim.git
+  
+* 再将CFD克隆到FENGSim/toolkit/路径下。 ::
+  
+    cd FENGSim/toolkit
+    git clone https://github.com/OpenDigitalTwin-Dev/CFD.git
+  
+* 在FENGSim/toolkit/CFD/su2中有一个install脚本，该脚本是根据网站中Build From Source写的，直接运行该脚本可以在Ubuntu24.04下编译SU2，无需其他操作。 ::
+  
+    cd FENGSim/toolkit/CFD/su2
+    ./install
+
+编译后，SU2安装在FENGSim/toolkit/CFD/install/su2_install路径下。
+
+
 **********************
 算例
 **********************
+
+在FENGSim/starter/su2/quickstart目录中保存了网站Docs菜单中Quick Start的例子，运行如下命令。 ::
+  
+    cd FENGSim/starter/su2/quickstart
+    mpirun -np 4 ./../../../toolkit/CFD/install/su2_install/bin/SU2_CFD inv_NACA0012.cfg
+
+这里需要注意在Ubuntu24.04必须按照并行运行，否则报错，但是Ubuntu20.04没有问题。
+Ubuntu24.04用apt安装的paraview打开flow.vtu报错，要用老一点版本的paraview，例如ParaView-5.11.2-MPI-Linux-Python3.9-x86_64。
+
+.. image:: fig/su2_1.png
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
 
 **********************
 前处理文件格式
