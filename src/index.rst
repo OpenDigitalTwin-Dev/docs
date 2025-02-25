@@ -25,12 +25,12 @@ User Guide是使用说明。在User Guide中，在第2节中介绍了3个例子�
   
     git clone https://github.com/OpenDigitalTwin-Dev/FENGSim.git
   
-* 再将CFD克隆到FENGSim/toolkit/路径下。 ::
+* 再将CFD克隆到 ``FENGSim/toolkit`` 路径下。 ::
   
     cd FENGSim/toolkit
     git clone https://github.com/OpenDigitalTwin-Dev/CFD.git
   
-* 在FENGSim/toolkit/CFD/openfoam中有一个install脚本，该脚本是根据网站中Compiling Sources写的，直接运行该脚本可以在Ubuntu24.04下编译OpenFOAM，无需其他操作。 ::
+* 在 ``FENGSim/toolkit/CFD/openfoam`` 中有一个install脚本，该脚本是根据网站中Compiling Sources写的，直接运行该脚本可以在Ubuntu24.04下编译OpenFOAM，无需其他操作。 ::
   
     cd FENGSim/toolkit/CFD/openfoam
     ./install
@@ -44,7 +44,7 @@ applications里有APP开发的例子，例子里主要包括二次开发的程�
     source OpenFOAM/etc/bashrc
     echo $FOAM_INST_DIR
 
-如果要编译APP，在FENGSim/starter/openfoam/mkdir中有一个例子，运行如下命令，会发现在当前目录下编译生成了可执行程序Test-mkdir，运行可执行程序，在当前目录下创建了一个test目录。 ::
+如果要编译APP，在 ``FENGSim/starter/openfoam/mkdir`` 中有一个例子，运行如下命令，会发现在当前目录下编译生成了可执行程序Test-mkdir，运行可执行程序，在当前目录下创建了一个test目录。 ::
   
     cd FENGSim/starter/openfoam/mkdir
     wmake
@@ -54,17 +54,17 @@ applications里有APP开发的例子，例子里主要包括二次开发的程�
 算例
 **********************
 
-测试OpenFoam中的求解器，在FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/applications/路径下有两个目录，分别为modules和solvers。其中modules里是各个求解器模块，
-见User Guide中第3.5节，求解器模块会编译成链接库，例如modules/fluid模块编译后，得到FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/platforms/linux64GccDPInt32Opt/lib/libfluid.so。
-solvers里是求解器，通过solvers调用modules里的模块，见User Guide中第3.6节，求解器会编译成可执行程序，例如solvers/foamRun编译后，得到FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/platforms/linux64GccDPInt32Opt/bin/foamRun。
+测试OpenFoam中的求解器，在 ``FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/applications/`` 路径下有两个目录，分别为modules和solvers。其中modules里是各个求解器模块，
+见User Guide中第3.5节，求解器模块会编译成链接库，例如 ``modules/fluid`` 模块编译后，得到 ``FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/platforms/linux64GccDPInt32Opt/lib/libfluid.so`` 。
+solvers里是求解器，通过solvers调用modules里的模块，见User Guide中第3.6节，求解器会编译成可执行程序，例如 ``solvers/foamRun`` 编译后，得到 ``FENGSim/toolkit/CFD/openfoam/OpenFOAM-dev/platforms/linux64GccDPInt32Opt/bin/foamRun`` 。
 
-在FENGSim/starter/openfoam/platHole目录中是一个固体算例，运行如下命令。 ::
+在 ``FENGSim/starter/openfoam/platHole`` 目录中是一个固体算例，运行如下命令。 ::
   
     cd FENGSim/starter/openfoam/platHole
     ./Allrun
     foamToVTK
 
-这里一定要注意，需要运行环境变量的配置文件。生成的vtk文件在FENGSim/starter/openfoam/platHole/VTK目录中，可以用paraview打开，如下图。
+这里一定要注意，需要运行环境变量的配置文件。生成的vtk文件在 ``FENGSim/starter/openfoam/platHole/VTK`` 目录中，可以用paraview打开，如下图。
     
 .. image:: fig/openfoam_1.png
    :scale: 50 %
@@ -77,9 +77,9 @@ solvers里是求解器，通过solvers调用modules里的模块，见User Guide�
 前处理文件格式
 **********************
 
-继续FENGSim/starter/openfoam/platHole目录中的固体算例，该目录下有三个子目录，分别为0、constant、system，其中0目录中的文件定义了边界条件，constant目录中的文件定义了物理参数，例如弹性模量和泊松比，system目录中的文件定义了网格剖分、求解器、时间步、离散以及解法器。
+继续 ``FENGSim/starter/openfoam/platHole`` 目录中的固体算例，该目录下有三个子目录，分别为0、constant、system，其中0目录中的文件定义了边界条件，constant目录中的文件定义了物理参数，例如弹性模量和泊松比，system目录中的文件定义了网格剖分、求解器、时间步、离散以及解法器。
 
-运行blockMesh可以进行网格剖分，剖分后的网格数据保存在constant/polyMesh/目录中的5个文件，分别为points、faces、owner、neighbour、boundary。和有限元网格有所区别，points是网格所有顶点，faces是网格所有单元面，单元面按照先内部单元面和后边界单元面排序，边界单元面按照几何模型面排序，owner定义了每个单元面归属的单元，如果是内部单元面，除了归属单元，还有相邻单元，相邻单元编号保存在neighbour中，boundary是所有边界单元面，同一几何面上的边界单元面集合是按照faces中单元面编号起始位置以及个数定义。
+运行blockMesh可以进行网格剖分，剖分后的网格数据保存在 ``platHole/constant/polyMesh`` 目录中的5个文件，分别为points、faces、owner、neighbour、boundary。和有限元网格有所区别，points是网格所有顶点，faces是网格所有单元面，单元面按照先内部单元面和后边界单元面排序，边界单元面按照几何模型面排序。owner定义了每个单元面归属的单元，如果是内部单元面，除了归属单元，还有相邻单元，相邻单元编号保存在neighbour中，这里需要注意的是neighbour对应了faces中的内部单元面，faces中内部单元面排在边界单元面前面。boundary是所有边界单元面，同一几何模型面上的边界单元面集合是按照faces中单元面编号起始位置以及个数定义。
 
 ######################
 SU2
@@ -101,30 +101,30 @@ SU2网站为 `<https://su2code.github.io/docs_v7/home/>`_ 。在网站Docs菜单
   
     git clone https://github.com/OpenDigitalTwin-Dev/FENGSim.git
   
-* 再将CFD克隆到FENGSim/toolkit/路径下。 ::
+* 再将CFD克隆到 ``FENGSim/toolkit`` 路径下。 ::
   
     cd FENGSim/toolkit
     git clone https://github.com/OpenDigitalTwin-Dev/CFD.git
   
-* 在FENGSim/toolkit/CFD/su2中有一个install脚本，该脚本是根据网站中Build From Source写的，直接运行该脚本可以在Ubuntu24.04下编译SU2，无需其他操作。 ::
+* 在 ``FENGSim/toolkit/CFD/su2`` 中有一个install脚本，该脚本是根据网站中Build From Source写的，直接运行该脚本可以在Ubuntu24.04下编译SU2，无需其他操作。 ::
   
     cd FENGSim/toolkit/CFD/su2
     ./install
 
-编译后，SU2安装在FENGSim/toolkit/CFD/install/su2_install路径下。
+编译后，SU2安装在 ``FENGSim/toolkit/CFD/install/su2_install`` 路径下。
 
 
 **********************
 算例
 **********************
 
-在FENGSim/starter/su2/quickstart目录中保存了网站Docs菜单中Quick Start的例子，运行如下命令。 ::
+在 ``FENGSim/starter/su2/quickstart`` 目录中保存了网站Docs菜单中Quick Start的例子，运行如下命令。 ::
   
     cd FENGSim/starter/su2/quickstart
     mpirun -np 4 ./../../../toolkit/CFD/install/su2_install/bin/SU2_CFD inv_NACA0012.cfg
 
-这里需要注意在Ubuntu24.04必须按照并行运行，否则报错，但是Ubuntu20.04没有问题。
-Ubuntu24.04用apt安装的paraview打开flow.vtu报错，要用老一点版本的paraview，例如ParaView-5.11.2-MPI-Linux-Python3.9-x86_64。
+这里需要注意在Ubuntu24.04下必须按照并行运行，否则报错，但是Ubuntu20.04没有问题。
+Ubuntu24.04下用apt安装的paraview打开flow.vtu报错，要用老一点版本的paraview，例如ParaView-5.11.2-MPI-Linux-Python3.9-x86_64。
 
 .. image:: fig/su2_1.png
    :scale: 50 %
