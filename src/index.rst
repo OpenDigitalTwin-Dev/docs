@@ -89,7 +89,7 @@ SU2
 文档
 **********************
 
-SU2网站为 `<https://su2code.github.io/docs_v7/home/>`_ 。在网站Docs菜单中的Build From Source里介绍了编译操作，在Quick Start中给出了一个示范例子。
+SU2网站为 `<https://su2code.github.io/docs_v7/home/>`_ 。在网站Docs菜单中的Build From Source里介绍了编译操作，在Quick Start中给出了一个示范例子。在网站Docs菜单中的Users Guide中的Mesh File中介绍了网格格式。
 
 **********************
 编译和安装
@@ -131,9 +131,14 @@ Ubuntu24.04下用apt安装的paraview打开flow.vtu报错，要用老一点版�
    :alt: alternate text
    :align: center
 
+SU2给了很多例子，在 ``FENGSim/toolkit/CFD/su2/TestCases`` 目录中，网格文件比较大，保存在另外一个仓库中 `<https://github.com/su2code/TestCases.git>`_ 。
+	   
 **********************
 前处理文件格式
 **********************
+SU2网格格式非常简单，首先给出体单元定义和编号，其次给出顶点坐标和编号，最后给出边界面标识，每个边界面包括的边界面单元和编号。前处理只有两个文件，一个网格文件，一个求解器配置文件，
+例如 ``FENGSim/starter/su2/quickstart`` 目录中的 ``inv_NACA0012.cfg`` 和 ``mesh_NACA0012_inv.su2`` ，其中 ``mesh_NACA0012_inv.su2`` 是网格文件。
+
 
 ######################
 Palace
