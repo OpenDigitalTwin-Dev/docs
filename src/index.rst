@@ -123,7 +123,7 @@ SU2网站为 `<https://su2code.github.io/docs_v7/home/>`_ 。在网站Docs菜单
     cd FENGSim/starter/su2/quickstart
     mpirun -np 4 ./../../../toolkit/CFD/install/su2_install/bin/SU2_CFD inv_NACA0012.cfg
 
-这里需要注意在Ubuntu24.04下必须按照并行运行，否则报错，但是Ubuntu20.04没有问题。
+这里需要注意在Ubuntu24.04下必须按照并行运行，否则报错，但是Ubuntu22.04没有问题。
 Ubuntu24.04下用apt安装的paraview打开flow.vtu报错，要用老一点版本的paraview，例如ParaView-5.11.2-MPI-Linux-Python3.9-x86_64。
 
 .. image:: fig/su2_1.png
