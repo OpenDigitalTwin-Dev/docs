@@ -131,7 +131,7 @@ Ubuntu24.04下用apt安装的paraview打开flow.vtu报错，要用老一点版�
    :alt: alternate text
    :align: center
 
-SU2给了很多例子，在 ``FENGSim/toolkit/CFD/su2/TestCases`` 目录中，网格文件比较大，保存在另外一个仓库中 `<https://github.com/su2code/TestCases.git>`_ 。
+SU2给了很多例子，在 ``FENGSim/toolkit/CFD/su2/TestCases`` 目录中，网格文件比较大，保存在另外一个仓库中 `<https://github.com/su2code/TestCases.git>`_ 。在网站Tutorials菜单中有这些例子的详细介绍。
 	   
 **********************
 前处理文件格式
