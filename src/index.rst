@@ -2,6 +2,26 @@
    :maxdepth: 2
 
 ######################
+FENGSim
+######################
+
+**********************
+参考资料
+**********************
+
+**********************
+编译安装
+**********************
+
+**********************
+算例测试
+**********************
+
+**********************
+前后处理文件格式
+**********************
+
+######################
 CCX
 ######################
 
@@ -145,7 +165,7 @@ SU2网站为 `<https://su2code.github.io/docs_v7/home/>`_ 。在网站Docs菜单
     mpirun -np 4 ./../../../toolkit/CFD/install/su2_install/bin/SU2_CFD inv_NACA0012.cfg
 
 这里需要注意在Ubuntu24.04下必须按照并行运行，否则报错，但是Ubuntu22.04没有问题。
-Ubuntu24.04下用apt安装的paraview打开flow.vtu报错，要用老一点版本的paraview，例如ParaView-5.11.2-MPI-Linux-Python3.9-x86_64。
+Ubuntu24.04下用apt安装的paraview打开 ``flow.vtu`` 报错，要用老一点版本的paraview，例如ParaView-5.11.2-MPI-Linux-Python3.9-x86_64。
 
 .. image:: fig/su2_1.png
    :scale: 50 %
@@ -158,11 +178,85 @@ SU2给了很多例子，在 ``FENGSim/toolkit/CFD/su2/TestCases`` 目录中，�
 前后处理文件格式
 **********************
 SU2网格格式非常简单，首先给出体单元定义和编号，其次给出顶点坐标和编号，最后给出边界面标识，每个边界面包括的边界面单元和编号。前处理只有两个文件，一个网格文件，一个求解器配置文件，
-例如 ``FENGSim/starter/su2/quickstart`` 目录中的 ``inv_NACA0012.cfg`` 和 ``mesh_NACA0012_inv.su2`` ，其中 ``mesh_NACA0012_inv.su2`` 是网格文件。
+例如 ``FENGSim/starter/su2/quickstart`` 目录中的inv_NACA0012.cfg和mesh_NACA0012_inv.su2，其中mesh_NACA0012_inv.su2是网格文件。
 
 
 ######################
 Palace
+######################
+
+**********************
+参考资料
+**********************
+
+Palace参考可见 `<https://awslabs.github.io/palace/dev/>`_ ，其中介绍了编译安装，但是没有提供第三方库，需要用户自己配置，Palace前处理文件json中定义了物理模型，对json文件格式进行了详细介绍。
+
+**********************
+编译安装
+**********************
+
+按照如下操作在FENGSim中编译Palace，如果已经克隆了FENGSim和CEM，请忽略前两步。
+
+* 首先克隆FENGSim。 ::
+  
+    git clone https://github.com/OpenDigitalTwin-Dev/FENGSim.git
+  
+* 再将CEM克隆到 ``FENGSim/toolkit`` 路径下。 ::
+  
+    cd FENGSim/toolkit
+    git clone https://github.com/OpenDigitalTwin-Dev/CEM.git
+  
+* 在 ``FENGSim/toolkit/CEM/palace`` 中有一个install脚本，直接运行该脚本可以在Ubuntu24.04下编译Palace，无需其他操作。 ::
+  
+    cd FENGSim/toolkit/CEM/palace
+    ./install
+
+编译后，Palace安装在 ``FENGSim/toolkit/CEM/install/palace_install`` 路径下。
+
+这里需要注意的是， ``FENGSim/toolkit/CEM/palace/palace/models/postoperator.cpp`` 编译有问题。需要将以下函数名中的Coeff和VCoeff去掉。 ::
+
+  RegisterVCoeffField
+  DeregisterVCoeffField
+  RegisterCoeffField
+  DeregisterCoeffField
+  CoeffFieldMapType
+  VCoeffFieldMapType
+  GetCoeffFieldMap
+  GetVCoeffFieldMap
+
+并将以下函数调用注销掉。 ::
+  
+  paraview_bdr.RegisterField(*)
+  paraview.RegisterField("U_e", U_e.get());
+  paraview.RegisterField("U_m", U_m.get());
+  paraview.RegisterField("S", S.get());
+
+
+**********************
+算例测试
+**********************
+
+直接运行Palace可执行程序 ``FENGSim/toolkit/CEM/install/palace_install/bin/palace`` 会有第三方链接库路径问题，暂时换一种方法运行。
+在 ``FENGSim/starter/palace/examples/`` 目录中保存了 ``FENGSim/toolkit/CEM/palace/examples/`` 目录下Palace自带的例子，例子介绍可见链接 `<https://awslabs.github.io/palace/dev/examples/examples/>`_ 。按照如下操作运行Capacitance Matrix for Two Spheres算例。 ::
+
+  cd FENGSim/starter/palace/examples/spheres
+  ./../../../../toolkit/CEM/palace/palace/build/palace-x86_64.bin spheres.json
+
+用paraview打开 ``FENGSim/starter/palace/examples/spheres/postpro/paraview/electrostatic/electrostatic.pvd`` ，如下图。
+
+.. image:: fig/palace_1.png
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+
+**********************
+前后处理文件格式
+**********************
+
+Palace前后处理文件比较简单，网格剖分采用Gmsh，在 ``FENGSim/starter/palace/examples/spheres/mesh`` 目录下，mesh.jl文件是Gmsh网格剖分操作，spheres.msh是生成的网格文件，在 ``FENGSim/starter/palace/examples/spheres/`` 目录下spheres.json文件中定义了物理模型以及解法器。在 ``FENGSim/starter/palace/examples/spheres/postpro`` 目录下是生成的结果文件， ``FENGSim/starter/palace/examples/spheres/postpro/paraview`` 目录下是生成的vtk文件。
+
+######################
+MBDyn
 ######################
 
 **********************
@@ -180,4 +274,3 @@ Palace
 **********************
 前后处理文件格式
 **********************
-
