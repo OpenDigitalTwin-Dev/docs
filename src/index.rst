@@ -225,7 +225,8 @@ Palace参考可见 `<https://awslabs.github.io/palace/dev/>`_ ，其中介绍了
   GetVCoeffFieldMap
 
 并将以下函数调用注销掉。 ::
-  
+
+  paraview_bdr.SetBoundaryOutput(true);
   paraview_bdr.RegisterField(*)
   paraview.RegisterField("U_e", U_e.get());
   paraview.RegisterField("U_m", U_m.get());
