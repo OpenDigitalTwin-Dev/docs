@@ -195,17 +195,32 @@ Palace参考可见 `<https://awslabs.github.io/palace/dev/>`_ ，其中介绍了
 编译安装
 **********************
 
-按照如下操作在FENGSim中编译Palace，如果已经克隆了FENGSim和CEM，请忽略前两步。
+按照如下操作在FENGSim中编译Palace。
 
 * 首先克隆FENGSim。 ::
   
     git clone https://github.com/OpenDigitalTwin-Dev/FENGSim.git
+
+* 将NSM克隆到 ``FENGSim/toolkit`` 路径下。 ::
   
-* 再将CEM克隆到 ``FENGSim/toolkit`` 路径下。 ::
+    cd FENGSim/toolkit
+    git clone https://github.com/OpenDigitalTwin-Dev/NSM.git
+
+* 将NLA克隆到 ``FENGSim/toolkit`` 路径下。 ::
+  
+    cd FENGSim/toolkit
+    git clone https://github.com/OpenDigitalTwin-Dev/NLA.git
+  
+* 将CEM克隆到 ``FENGSim/toolkit`` 路径下。 ::
   
     cd FENGSim/toolkit
     git clone https://github.com/OpenDigitalTwin-Dev/CEM.git
+
+* 在 ``FENGSim/toolkit/NSM/extern/ALE/`` 中有一个install脚本，运行该脚本。 ::
   
+    cd FENGSim/toolkit/NSM/extern/ALE/
+    ./install.sh
+    
 * 在 ``FENGSim/toolkit/CEM/palace`` 中有一个install脚本，直接运行该脚本可以在Ubuntu24.04下编译Palace，无需其他操作。 ::
   
     cd FENGSim/toolkit/CEM/palace
