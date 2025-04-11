@@ -9,9 +9,29 @@ FENGSim
 参考资料
 **********************
 
+
 **********************
 编译安装
 **********************
+
+将FENGSim一次性部署在服务器上，供多个用户使用。采用Docker避免部署对宿主机的影响，在 ``FENGSim/cli`` 路径下有两个脚本，分别为test-docker.sh和test-docker-gui.sh，这两个脚本默认FENGSim路径为 ``$HOME/FENGSim`` ，运行脚本都会建立Ubuntu24.04容器并进入，test-docker-gui.sh建立的容器可以运行图形用户界面。
+
+之后在宿主机上按照如下命令建立Docker组，并添加成员。 ::
+  
+  sudo groupadd -f docker
+  sudo usermod -aG docker user_name
+
+不同用户就都可以使用同一容器了，容器名称为test。 ::
+
+  sudo docker ps -a
+  sudo docker start test
+  sudo docker exec -it test /bin/bash
+
+FENGSim直接部署在阿里云服务器或者Docker，如果是root账户，在编译和运行求解器时候会产生mpi报错，例如Palace编译中Petsc会产生mpi报错，mpirun命令也会报错，因此要采用非root账户。
+
+求解器可执行程序可以建立软链接到 ``/usr/local/bin`` 目录中，建立软链接时要注意源文件和链接文件路径要写详细，不要用相对路径。
+
+如果将FENGSim打包成Docker镜像，由于FENGSim和求解器包括了大量软件源代码，存储大概为10g，如果进行了编译存储会更大，如果打包编译后可执行程序以及链接库会导致镜像存储太大，并且由于用户可以自由选择安装，建议Docker只打包源代码。
 
 **********************
 算例测试
@@ -247,7 +267,9 @@ Palace参考可见 `<https://awslabs.github.io/palace/dev/>`_ ，其中介绍了
   paraview.RegisterField("U_m", U_m.get());
   paraview.RegisterField("S", S.get());
 
+如果用阿里云服务器root账户编译Palace，Petsc编译中的mpi并行会报错，如果是用docker中root账户，Palace并行计算也会报错，因此采用非root账户。
 
+  
 **********************
 算例测试
 **********************
@@ -348,6 +370,31 @@ MBDyn
    :scale: 50 %
    :alt: alternate text
    :align: center    
+
+
+**********************
+前后处理文件格式
+**********************
+
+
+######################
+ROS2/MoveIt2
+######################
+
+**********************
+参考资料
+**********************
+
+
+
+**********************
+编译安装
+**********************
+
+**********************
+算例测试
+**********************
+
 
 
 **********************
