@@ -29,10 +29,12 @@ FENGSim
 
 FENGSim直接部署在阿里云服务器或者Docker，如果是root账户，在编译和运行求解器时候会产生mpi报错，例如Palace编译中Petsc会产生mpi报错，mpirun命令也会报错，因此要采用非root账户，在Docker容器中也可以采用adduser命令创建新用户，然后用新用户登录容器。
 
-可以在Docker中编译FENGSim前后处理软件，由于Docker中是极简操作系统，有些Qt需要的链接库可能没有，设置环境变量，export QT_DEBUG_PLUGINS=1，根据报错安装相应的链接库，然后可以从Docker打开FENGSim图形用户界面。
-
+FENGSim可以在Docker容器中编译前后处理软件的Qt图形用户界面，由于Docker中是极简的操作系统，有一些Qt需要的链接库不存在，编译过程会报错，采用
 
 求解器可执行程序可以建立软链接到 ``/usr/local/bin`` 目录中，建立软链接时要注意源文件和链接文件路径要写详细，不要用相对路径。
+
+
+
 
 **********************
 算例测试
