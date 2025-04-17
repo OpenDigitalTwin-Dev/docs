@@ -385,6 +385,10 @@ ROS2/MoveIt2
 参考资料
 **********************
 
+ROS2的参考文献见 `<https://docs.ros.org/>`_ ，我们选择的版本为Jazzy，编译脚本的参考文献见 `<https://docs.ros.org/en/jazzy/>`_ ，在Installation中的Alternatives中的Ubuntu(Source)中有编译安装介绍，
+install脚本是按照该介绍写的。MoveIt2的编译脚本的参考文献见 `<https://moveit.ai/install-moveit2/source/>`_ ，install脚本是按照该介绍写的。MoveIt2 Tutorials的编译脚本的参考文献见 `<https://github.com/moveit/moveit2_tutorials>`_ ，在MoveIt Tutorials Source Build中有编译安装介绍。
+
+
 
 
 **********************
@@ -461,7 +465,10 @@ ROS2、MoveIt2、MoveIt2_Tutorials的编译安装可以在Docker中进行，运�
 **********************
 
 
-
+.. image:: fig/ros2moveit2.png
+   :scale: 50 %
+   :alt: alternate text
+   :align: center    
 
 **********************
 前后处理文件格式
