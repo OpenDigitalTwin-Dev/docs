@@ -58,6 +58,11 @@ CCX
 算例测试
 **********************
 
+.. image:: fig/shape_7.gif
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+	   
 **********************
 前后处理文件格式
 **********************
