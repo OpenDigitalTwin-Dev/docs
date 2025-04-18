@@ -478,7 +478,7 @@ ROS2、MoveIt2、MoveIt2_Tutorials的编译安装可以在Docker中进行，运�
   source moveit2_tutorials/install/setup.bash
   ros2 launch moveit2_tutorials demo.launch.py
 
-.. image:: fig/ros2moveit2.png
+.. image:: fig/ros2moveit2.gif
    :scale: 50 %
    :alt: alternate text
    :align: center    
