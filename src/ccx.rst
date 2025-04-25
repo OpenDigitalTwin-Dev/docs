@@ -64,13 +64,13 @@ CalculiX网站为 `<https://www.calculix.de/>`_ 和 `<https://www.dhondt.de/>`_ 
 前后处理文件格式
 **********************
 
-Calculix前处理文件就是Abaqus的inp格式，后处理有一个python的模块，名字叫做ccx2paraview，可以将Calculix自己的frd格式转成vtk或者vtu，在 ``toolkit/NSM/extern/Calculix/ccx2paraview`` 目录下的README.md中有ccx2paraview的使用介绍，可以按照如下命令操作。 ::
+CalculiX前处理文件就是Abaqus的inp格式，后处理有一个python的模块，名字叫做ccx2paraview，可以将CalculiX自己的frd格式转成vtk或者vtu，在 ``FENGSim/toolkit/NSM/extern/Calculix/ccx2paraview`` 目录下的README.md中有ccx2paraview的使用介绍，可以按照如下命令操作。 ::
 
   cd FENGSim/starter/ccx/Mesh1
   python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtu
   python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtk
 
-.. image:: fig/ccx_1.png
+.. image:: fig/ccx_1.gif
    :scale: 50 %
    :alt: alternate text
    :align: center
