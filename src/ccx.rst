@@ -59,10 +59,6 @@ CalculiX网站为 `<https://www.calculix.de/>`_ 和 `<https://www.dhondt.de/>`_ 
 |    :width: 200px                   |    :width: 200px                   |    :width: 200px                  |
 +------------------------------------+------------------------------------+-----------------------------------+
 
-.. image:: fig/shape_7.gif
-   :scale: 50 %
-   :alt: alternate text
-   :align: center
 	   
 **********************
 前后处理文件格式
