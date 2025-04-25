@@ -43,7 +43,7 @@ CalculiX网站为 `<https://www.calculix.de/>`_ 和 `<https://www.dhondt.de/>`_ 
 
 这里需要注意的是该算例会生成.gif动画文件，然后保存在 ``FENGSim/starter/ccx/Mesh1/Refs`` 目录中。
 算例的运行可以直接执行上面的命令，也可以运行test.py脚本，但是由于可执行程序目录不一定是test.py脚本中的默认目录，脚本运行会有问题，另外test.py脚本自动创建了Refs目录，
-如果运行命令，需要手动创建该目录。
+如果运行命令，需要手动创建Refs目录。
 
 +------------------------------------+------------------------------------+-----------------------------------+
 | .. image:: fig/modal/shape_1.gif   | .. image:: fig/modal/shape_2.gif   | .. image:: fig/modal/shape_3.gif  |
@@ -63,3 +63,14 @@ CalculiX网站为 `<https://www.calculix.de/>`_ 和 `<https://www.dhondt.de/>`_ 
 **********************
 前后处理文件格式
 **********************
+
+Calculix前处理文件就是Abaqus的inp格式，后处理有一个python的模块，名字叫做ccx2paraview，可以将Calculix自己的frd格式转成vtk或者vtu，在 ``toolkit/NSM/extern/Calculix/ccx2paraview`` 目录下的README.md中有ccx2paraview的使用介绍，可以按照如下命令操作。 ::
+
+  cd FENGSim/starter/ccx/Mesh1
+  python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtu
+  python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtk
+
+.. image:: fig/ccx_1.png
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
