@@ -41,7 +41,7 @@ CalculiX网站为 `<https://www.calculix.de/>`_ 和 `<https://www.dhondt.de/>`_ 
   ./../../../toolkit/NSM/extern/Calculix/bin/ccx_2.21 modal
   ./../../../toolkit/NSM/extern/Calculix/bin/cgx -b shapes.fbl
 
-这里需要注意的是该算例会生成.gif动画文件，然后保存在 ``FENGSim/starter/ccx/Mesh1/Refs`` 目录中。
+pre.fbl是cgx前处理建模脚本，通过cgx可以生成inp格式的网格文件all.msh。这里需要注意的是该算例会生成.gif动画文件，然后保存在 ``FENGSim/starter/ccx/Mesh1/Refs`` 目录中。
 算例的运行可以直接执行上面的命令，也可以运行test.py脚本，但是由于可执行程序目录不一定是test.py脚本中的默认目录，脚本运行会有问题，另外test.py脚本自动创建了Refs目录，
 如果运行命令，需要手动创建Refs目录。
 
@@ -71,6 +71,32 @@ CalculiX前处理文件就是Abaqus的inp格式，后处理有一个python的模
   python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtk
 
 .. image:: fig/ccx_1.gif
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+
+==========================
+格式转换
+==========================
+
+
+--------------------
+xml转inp
+--------------------
+
+在 ``FENGSim/starter/ccx/Mesh1`` 目录下有configure_modal.xml、all.msh、all2.msh、modal.inp、xml2inp.py。
+all.msh和all2.msh是inp格式的网格文件，虽然后缀名是.msh，all.msh是Mesh1算例原始的网格文件，all2.msh是gmsh生成的新例子的网格文件。
+xml2inp.py提取configure_modal.xml中的数据，提取all.msh或者all2.msh中的数据，生成新的modal.inp。这里需要注意的是gmsh导出all2.msh的时候，
+all2.msh中包括了边、面、体的单元数据，要把边和面的单元数据去掉，之后和configure_modal.xml中配置数据合并成一个modal.inp。
+
+xml2inp.py的运行结果如下图，文件名称不用输入后缀名。
+
+.. image:: fig/ccx_2.png
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+
+.. image:: fig/ccx_2.gif
    :scale: 50 %
    :alt: alternate text
    :align: center
