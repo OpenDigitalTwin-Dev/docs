@@ -91,7 +91,6 @@ all2.msh中包括了边、面、体的单元数据，要把边和面的单元数
 
 xml2inp.py的运行结果如下图，文件名称不用输入后缀名。
 
-test
 
 .. image:: fig/ccx_2.png
    :scale: 50 %
