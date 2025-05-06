@@ -55,3 +55,5 @@ SU2给了很多例子，在 ``FENGSim/toolkit/CFD/su2/TestCases`` 目录中，�
 **********************
 SU2网格格式非常简单，首先给出体单元定义和编号，其次给出顶点坐标和编号，最后给出边界面标识，每个边界面包括的边界面单元和编号。前处理只有两个文件，一个网格文件，一个求解器配置文件，
 例如 ``FENGSim/starter/su2/quickstart`` 目录中的inv_NACA0012.cfg和mesh_NACA0012_inv.su2，其中mesh_NACA0012_inv.su2是网格文件。
+
+可以用Gmsh生成.su2的网格文件，并用Gmsh标识边界。在 ``FENGSim/starter/su2/quickstart`` 目录中的test.geo是Gmsh建模的脚本文件，可以用Gmsh导入，其中包括了导入airfoil的cad模型步骤，边界标识步骤，标识成airfoil和farfield两部分。再进行网格剖分，导出.msh和.su2格式文件，如 ``FENGSim/starter/su2/quickstart`` 目录中的test.msh和test.su2。
