@@ -9,5 +9,6 @@
 .. include:: palace.rst
 .. include:: mbdyn.rst
 .. include:: ros2.rst
+.. include:: karamelo.rst
 
 
