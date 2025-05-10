@@ -61,7 +61,7 @@ OVITO是一个专业的粒子仿真可视化软件，保存在 ``FENGSim/toolkit
    :alt: alternate text
    :align: center
 
-如果采用了并行计算，每个进程会单独生成结果文件，有一个Python脚本可以将所有进程文件合并起来，OVITO其实也具备这个功能，但是需要付费的专业版本。按照如下命令执行并行操作。 ::
+如果采用了并行计算，每个进程会单独生成结果文件，用Python脚本可以将所有进程文件合并起来，OVITO其实也具备这个功能，但是需要付费的专业版本。按照如下命令执行并行操作。 ::
 
   cd FENGSim/starter/karamelo/ex_1
   mpirun -np 2 ./../../../toolkit/NSM/extern/Karamelo/build/karamelo -i two-disks.mpm
