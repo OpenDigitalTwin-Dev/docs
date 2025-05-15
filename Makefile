@@ -5,13 +5,13 @@
 SPHINXOPTS    = 
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = ReadtheDocsSphinxTheme
-SOURCEDIR     = .
+SOURCEDIR     = src
 BUILDDIR      = build
 
 # Put it first so that "make" without argument is like "make help".
 
 all:
-	sphinx-build -M html . build
+	sphinx-build -M html src build
 
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
