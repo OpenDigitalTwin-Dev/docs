@@ -1,4 +1,0 @@
-breathe
-exhale
-sphinx-rtd-theme
-sphinxcontrib-bibtex
