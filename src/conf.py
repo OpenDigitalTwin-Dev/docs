@@ -13,11 +13,11 @@ from sphinx_rtd_theme import __version__ as theme_version
 from sphinx_rtd_theme import __version_full__ as theme_version_full
 from sphinx.locale import _
 
-project = u'Read the Docs Sphinx Theme'
+project = u'FENGSim'
 slug = re.sub(r'\W+', '-', project.lower())
 version = theme_version
 release = theme_version_full
-author = u'Dave Snider, Read the Docs, Inc. & contributors'
+author = u'Dr. Jiping Xin'
 copyright = author
 language = 'en'
 
