@@ -6,7 +6,7 @@ FENGSim Documentation
 .. Hidden TOCs
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    fengsim
    ccx
