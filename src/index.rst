@@ -48,7 +48,7 @@ Sphinx和reStructuredText介绍链接为 `<https://www.sphinx-doc.org/en/master/
 
 需要注意以下几点操作：
 
-* ``FENGSim/docs/.readthedocs.yaml`` 中有两处路径设置，分别为configuration: src/conf.py和- requirements: requirements.txt。
-* ``FENGSim/docs/requirements.txt`` 中列出了需要ReadtheDocs安装的软件包。
-* ``FENGSim/docs/Makefile`` 中有两处路径设置，分别为SOURCEDIR=src和BUILDDIR=build。
-* ``FENGSim/docs/src/conf.py`` 为Sphinx配置程序，设置了logo路径为html_logo="demo/static/Fengsim_logo_hi.png"， ``FENGSim/docs/src/demo/static/Fengsim_logo_hi.png`` 是logo图片。
+* ``FENGSim/docs/.readthedocs.yaml`` 文件中有两处路径设置，分别为configuration: src/conf.py和- requirements: requirements.txt。
+* ``FENGSim/docs/requirements.txt`` 文件中列出了需要ReadtheDocs安装的软件包。
+* ``FENGSim/docs/Makefile`` 文件中有两处路径设置，分别为SOURCEDIR=src和BUILDDIR=build。
+* ``FENGSim/docs/src/conf.py`` 文件为Sphinx配置程序，设置了logo路径为html_logo="demo/static/Fengsim_logo_hi.png"， ``FENGSim/docs/src/demo/static/Fengsim_logo_hi.png`` 是logo图片。
