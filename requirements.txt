@@ -1,1 +1,5 @@
 sphinx~=8.0
+breathe
+exhale
+sphinx-rtd-theme
+sphinxcontrib-bibtex
