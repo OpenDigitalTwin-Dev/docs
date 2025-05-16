@@ -58,7 +58,8 @@ html_theme_options = {
     'style_nav_header_background': '#BFBFBF',
     'display_version': True,
     'version_selector': True,
-    'flyout_display':'hidden'
+    'flyout_display':'hidden',
+    'prev_next_buttons_location':'top'
 }
 html_context = {}
 
