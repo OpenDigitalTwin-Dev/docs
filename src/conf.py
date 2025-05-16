@@ -53,12 +53,12 @@ intersphinx_mapping = {
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
-    'logo_only': True,
+    'logo_only': False,
     'navigation_depth': 5,
-    'style_nav_header_background': 'grey',
-    'display_version': False,
+    'style_nav_header_background': '#BFBFBF',
+    'display_version': True,
     'version_selector': True,
-    'flyout_display':'attached'
+    'flyout_display':'hidden'
 }
 html_context = {}
 
