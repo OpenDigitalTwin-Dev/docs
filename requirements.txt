@@ -1,5 +1,5 @@
 sphinx~=8.0
 breathe
 exhale
-sphinx-rtd-theme
+sphinx-rtd-theme=3.0.2
 sphinxcontrib-bibtex

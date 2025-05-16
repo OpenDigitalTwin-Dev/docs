@@ -57,7 +57,7 @@ html_theme_options = {
     'navigation_depth': 5,
     'style_nav_header_background': '#BFBFBF',
     'display_version': True,
-    'version_selector': True,
+    'version_selector': False,
     'flyout_display':'hidden',
     'prev_next_buttons_location':'top'
 }
