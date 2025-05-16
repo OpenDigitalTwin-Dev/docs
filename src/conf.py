@@ -15,8 +15,8 @@ from sphinx.locale import _
 
 project = u'FENGSim'
 slug = re.sub(r'\W+', '-', project.lower())
-version = theme_version
-release = theme_version_full
+version = "1.0"
+release = "1.0"
 author = u'Dr. Jiping Xin'
 copyright = author
 language = 'en'
@@ -55,7 +55,8 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'logo_only': True,
     'navigation_depth': 5,
-    'style_nav_header_background': 'white'
+    'style_nav_header_background': 'grey',
+    'display_version': False
 }
 html_context = {}
 
