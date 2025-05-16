@@ -27,6 +27,6 @@ Sphinx和reStructuredText的介绍链接为 `<https://www.sphinx-doc.org/en/mast
 需要注意以下几点操作：
 
 * ``FENGSim/docs/`` 路径下的.readthedocs.yaml文件中有两处路径设置，需要设置conf.py和requirements.txt的路径。
-* ``FENGSim/docs/`` 路径下的requirements.txt文件中列出了需要ReadtheDocs安装的软件包。
+* ``FENGSim/docs/`` 路径下的requirements.txt文件中列出了需要ReadtheDocs安装的软件包，其中sphinx-rtd-theme需要指定3.0.2版本，否则 ``FENGSim/docs/src`` 路径下的conf.py中的html_theme_options中的version_selector会有问题。
 * ``FENGSim/docs/`` 路径下的Makefile文件中有两处路径设置，分别为SOURCEDIR和BUILDDIR，SOURCEDIR为conf.py和.rst文件的路径，BUILDDIR为编译结果路径。
 * ``FENGSim/docs/src/`` 路径下的conf.py文件为Sphinx配置程序，用html_logo设置了logo路径，Fengsim_logo_hi.png是logo图片。
