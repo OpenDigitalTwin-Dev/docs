@@ -56,7 +56,8 @@ html_theme_options = {
     'logo_only': True,
     'navigation_depth': 5,
     'style_nav_header_background': 'grey',
-    'display_version': False
+    'display_version': False,
+    'version_selector': False
 }
 html_context = {}
 
