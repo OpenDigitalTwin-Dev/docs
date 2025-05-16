@@ -57,7 +57,8 @@ html_theme_options = {
     'navigation_depth': 5,
     'style_nav_header_background': 'grey',
     'display_version': False,
-    'version_selector': False
+    'version_selector': True,
+    'flyout_display':'attached'
 }
 html_context = {}
 
