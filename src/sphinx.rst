@@ -5,8 +5,8 @@
 Sphinx
 #########################################
 
-需要清楚Sphinx，reStructuredText和ReadtheDocs之间的关系。Sphinx是一个用Python做的程序文档软件，程序里写注释自动生成程序文档，
-并可以用reStructuredText写更复杂的内容，并转化成各种格式，例如html和latex。Sphinx有很多Python包，可以通过apt安装。ReadtheDocs是Sphinx的部署运行，生成html网页供用户使用，并插入广告。
+需要清楚Sphinx，reStructuredText和ReadtheDocs之间的关系。Sphinx是一个用Python做的程序文档生成软件，程序里写注释自动生成程序文档，
+并可以用reStructuredText写更复杂的内容，例如论文，并转化成各种格式，例如html和latex。Sphinx有很多Python包，可以通过apt安装。ReadtheDocs是Sphinx的部署运行，生成html网页供用户使用，并插入广告。
 
 Sphinx和reStructuredText的介绍链接为 `<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ 。
 该模板下载链接为 `<https://github.com/readthedocs/sphinx_rtd_theme>`_ ，其中docs文件夹为该模板，模板使用文档链接为 `<https://sphinx-rtd-theme.readthedocs.io/>`_ ，
