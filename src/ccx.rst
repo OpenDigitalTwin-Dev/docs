@@ -76,6 +76,47 @@ CalculiX前处理文件就是Abaqus的inp格式，后处理有一个python的模
    :align: center
 
 ==========================
+Paraview查看模态动画
+==========================
+
+用Paraview也可以查看模态的动画，具体见VTK的AnimateModes类介绍如下，链接为 `<https://vtk.org/doc/nightly/html/classvtkAnimateModes.html>`_ 。 ::
+
+  For certain file formats, like Exodus, simulation codes may use
+  the timesteps and time values to represent quantities other than time.
+  For example, for modal analysis, the natural frequency for each mode
+  may be used as the time value. vtkAnimateModes can be used to reinterpret
+  time as mode shapes. The filter can also animate vibrations for
+  each mode shape (when AnimateVibrations is set to true).
+  In that case, the time requested by the downstream pipeline is used to
+  scale the displacement magnitude for a mode shape in a sinusoidal pattern,
+  cos(2*pi * requested-time).
+
+具体操作参考下图。
+
+.. image:: fig/ccx/modal.png
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+	   
+首先用Paraview打开 ``FENGSim/starter/ccx/beam/`` 路径下的modal.08.vtk，
+点击Pipeline Browser里的modal.08.vtk，点击WarpByVector的按钮，该按钮对应工具栏中发生变形的图标，
+再点击Pipeline Browser里的modal.08.vtk，选择Filters里的Animate Modes，这里需要注意的是
+点击WarpByVector和选择Animate Modes之前一定要先点击modal.08.vtk，modal.08.vtk是数据源，
+其他操作是基于数据源操作，一定要先选择数据源。
+
+其次点击Pipeline Browser里的WarpByVector1，在Properties中的Scale Factor进行刷新，
+即点击最右侧两个箭头循环的按钮，刷新后Scale Factor显示3.051660754888145e-05，复制该数据。
+
+最后点击Pipeline Browser里的AnimateModes1，将复制的3.051660754888145e-05粘贴到Properties中的
+Displacement Magnitude里，同时取消下面的Displacement Preapplied。
+
++------------------------------------+------------------------------------+
+| .. image:: fig/ccx/shape_8.gif     | .. image:: fig/ccx/modal.gif       |
+|    :width: 350px                   |    :width: 350px                   |
++------------------------------------+------------------------------------+
+
+	   
+==========================
 格式转换
 ==========================
 
