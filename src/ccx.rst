@@ -180,4 +180,4 @@ configure_modal.xml是.xml格式配置文件，all.msh是Gmsh生成的.inp格式
    :alt: alternate text
    :align: center
 
-.. include:: ccx/oiltank.rst
+.. include:: _ccx/oiltank.rst
