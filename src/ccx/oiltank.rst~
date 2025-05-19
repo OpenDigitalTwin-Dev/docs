@@ -1,0 +1,16 @@
+--------------------
+dat转inp
+--------------------
+
+在 ``FENGSim/starter/ccx/oiltank`` 目录下有configure_modal.xml、oiltank.dat、dat2inp.py。
+configure_modal.xml是配置文件，oiltank.dat是网格文件。
+dat2inp.py提取configure_modal.xml文件中的数据，提取oiltank.dat文件中的数据，将.dat格式转成.inp格式，合并生成新的modal.inp。
+
+dat2inp.py的运行结果如下图，文件名称不用输入后缀名。
+
+.. image:: fig/ccx/oiltank.jpg
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+
+
