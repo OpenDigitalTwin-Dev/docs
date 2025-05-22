@@ -81,7 +81,7 @@ Palace参考可见 `<https://awslabs.github.io/palace/dev/>`_ ，其中介绍了
   cd FENGSim/starter/palace/examples/spheres
   ./../../../../toolkit/CEM/palace/palace/build/palace-x86_64.bin spheres.json
 
-用paraview打开 ``FENGSim/starter/palace/examples/spheres/postpro/paraview/electrostatic/electrostatic.pvd`` ，如下图。
+用Paraview打开 ``FENGSim/starter/palace/examples/spheres/postpro/paraview/electrostatic/electrostatic.pvd`` ，如下图。
 
 .. image:: fig/palace_1.png
    :scale: 50 %

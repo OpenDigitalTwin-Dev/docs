@@ -14,7 +14,7 @@
   cd FENGSim/starter/palace/examples/static_mag
   ./../../../../toolkit/CEM/palace/palace/build/palace-x86_64.bin mag2.json
 
-用paraview打开 ``FENGSim/starter/palace/examples/static_mag/postpro/paraview/magnetostatic/magnetostatic.pvd`` ，如下图。
+用Paraview打开 ``FENGSim/starter/palace/examples/static_mag/postpro/paraview/magnetostatic/magnetostatic.pvd`` ，需要使用Filters中的Glyph，如下图。
 
 +------------------------------------+------------------------------------+
 | .. image:: fig/mag_2.png           | .. image:: fig/mag_1.png           |
