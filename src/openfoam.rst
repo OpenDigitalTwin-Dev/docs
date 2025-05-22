@@ -38,7 +38,7 @@ applications里有APP开发的例子，例子里主要包括二次开发的程�
 编译安装完后，为了运行可执行程序或者调用链接库，需要配置环境变量，运行如下命令。 ::
   
     cd FENGSim/toolkit/CFD/openfoam
-    source OpenFOAM/etc/bashrc
+    source OpenFOAM-dev/etc/bashrc
     echo $FOAM_INST_DIR
 
 如果要编译APP，在 ``FENGSim/starter/openfoam/mkdir`` 中有一个例子，运行如下命令，会发现在当前目录下编译生成了可执行程序Test-mkdir，运行可执行程序，在当前目录下创建了一个test目录。 ::
