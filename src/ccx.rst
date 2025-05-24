@@ -61,7 +61,7 @@ pre.fbl是cgx前处理建模脚本，通过cgx可以生成inp格式的网格文�
 
 	   
 **********************
-前后处理文件格式
+前后处理
 **********************
 
 CalculiX前处理文件就是Abaqus的inp格式，后处理有一个python的模块，名字叫做ccx2paraview，可以将CalculiX自己的frd格式转成vtk或者vtu，在 ``FENGSim/toolkit/NSM/extern/Calculix/ccx2paraview`` 目录下的README.md中有ccx2paraview的使用介绍，可以按照如下命令操作。 ::

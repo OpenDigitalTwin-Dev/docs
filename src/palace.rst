@@ -91,7 +91,7 @@ Palace参考可见 `<https://awslabs.github.io/palace/dev/>`_ ，其中介绍了
 .. include:: _palace/stasticmag.rst
 
 **********************
-前后处理文件格式
+前后处理
 **********************
 
 Palace前后处理文件比较简单，网格剖分采用Gmsh，在 ``FENGSim/starter/palace/examples/spheres/mesh`` 目录下，mesh.jl文件是Gmsh网格剖分操作，通过Julia接口操作，spheres.msh是生成的网格文件。在 ``FENGSim/starter/palace/examples/spheres/`` 目录下spheres.json文件中定义了物理模型以及解法器。在 ``FENGSim/starter/palace/examples/spheres/postpro`` 目录下是生成的结果文件， ``FENGSim/starter/palace/examples/spheres/postpro/paraview`` 目录下是生成的vtk文件。Palace原始例子中给的网格文件spheres.msh是高阶有限元用的，在 ``FENGSim/starter/palace/examples/spheres/`` 目录下有一个spheres.geo文件，这个文件是gmsh建模的脚本，可以用gmsh打开spheres.geo，然后剖分得到一阶有限元的网格文件spheres2.msh，保存到 ``FENGSim/starter/palace/examples/spheres/mesh`` 目录下。

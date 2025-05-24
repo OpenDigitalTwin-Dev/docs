@@ -71,7 +71,7 @@ solvers里是求解器，通过solvers调用modules里的模块，见User Guide�
 
 	   
 **********************
-前后处理文件格式
+前后处理
 **********************
 
 继续 ``FENGSim/starter/openfoam/platHole`` 目录中的固体算例，该目录下有三个子目录，分别为0、constant、system，其中0目录中的文件定义了边界条件，constant目录中的文件定义了物理参数，例如弹性模量和泊松比，system目录中的文件定义了网格剖分、求解器、时间步、离散以及解法器。
