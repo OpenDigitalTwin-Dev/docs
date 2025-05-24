@@ -14,7 +14,7 @@ FDM（Fused Deposition Modeling）的例子
 路径规划参照当前Cura中的相关例子实现相关路径规划功能（功能参见文档），路径后处理生成gcode（gcode代码介绍参见文档）
 
 .. image:: fig/clipper/1.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
@@ -29,12 +29,12 @@ FDM（Fused Deposition Modeling）的例子
 """"""""""""""""""""""""""""""""""""""""
 
 .. image:: fig/clipper/2.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
 .. image:: fig/clipper/3.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
@@ -42,12 +42,12 @@ FDM（Fused Deposition Modeling）的例子
 本例子振镜系统采用3D打印用f-θ聚焦扫描激光系统 ：采用德国SCANLAB公司的intelliSCAN 20(加装自动校准系统ASC) 及RTC4（2D）控制卡、德国LInos公司焦距f=420mm 的场镜、气动变焦扩束镜及保护镜片、瑞士RayTools公司的准直器，适配QBH输出的IPG 500W单模光纤激光器，如下面示意图组成 。
 
 .. image:: fig/clipper/4.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
 .. image:: fig/clipper/5.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
@@ -63,12 +63,12 @@ FDM（Fused Deposition Modeling）的例子
 * 分区间隔或搭接设置、路径搭接设置、ZigZag扫描方向设置等
 
 .. image:: fig/clipper/6.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
 .. image:: fig/clipper/7.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
@@ -76,7 +76,7 @@ FDM（Fused Deposition Modeling）的例子
 * 激光选区融化路径软件架构
 
 .. image:: fig/clipper/8.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
@@ -89,17 +89,17 @@ RTC主要是实现激光振镜控制（开发说明文档见），PMAC卡主要�
 主要包括激光同轴送粉、电子束送丝、电弧送丝等
 
 .. image:: fig/clipper/9.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
 .. image:: fig/clipper/10.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
 .. image:: fig/clipper/11.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
@@ -119,12 +119,12 @@ RTC主要是实现激光振镜控制（开发说明文档见），PMAC卡主要�
 激光同轴送粉、电子束送丝、电弧送丝等工艺也有相关3D的路径规划需求，以及增减材需求，这方面我以前都是对UG进行二次开发来进行。开源的应该有一些库可以试一下，看能不能做成例子。
 
 .. image:: fig/clipper/12.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
 .. image:: fig/clipper/13.png
-   :scale: 50 %
+   :width: 300px
    :alt: alternate text
    :align: center
 
