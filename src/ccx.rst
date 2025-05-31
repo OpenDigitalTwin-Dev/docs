@@ -19,14 +19,14 @@ CalculiX网站为 `<https://www.calculix.de/>`_ 和 `<https://www.dhondt.de/>`_ 
   
     git clone https://github.com/OpenDigitalTwin-Dev/FENGSim.git
   
-* 再将NSM克隆到 ``FENGSim/toolkit`` 路径下。 ::
+* 再将MultiX克隆到 ``FENGSim/toolkit`` 路径下。 ::
   
     cd FENGSim/toolkit
-    git clone https://github.com/OpenDigitalTwin-Dev/NSM.git
+    git clone https://github.com/OpenDigitalTwin-Dev/MultiX.git
   
-* 在 ``FENGSim/toolkit/NSM/extern/Calculix`` 中有一个install.sh脚本，直接运行该脚本可以在Ubuntu24.04下编译CalculiX和CalculiX GraphiX，无需其他操作。 ::
+* 在 ``FENGSim/toolkit/MultiX/extern/Calculix`` 中有一个install.sh脚本，直接运行该脚本可以在Ubuntu24.04下编译CalculiX和CalculiX GraphiX，无需其他操作。 ::
   
-    cd FENGSim/toolkit/NSM/extern/Calculix
+    cd FENGSim/toolkit/MultiX/extern/Calculix
     ./install.sh
     
 **********************
@@ -37,9 +37,9 @@ CalculiX网站为 `<https://www.calculix.de/>`_ 和 `<https://www.dhondt.de/>`_ 
   
   cd FENGSim/starter/ccx/Mesh1
   mkdir Refs
-  ./../../../toolkit/NSM/extern/Calculix/bin/cgx -b pre.fbl
-  ./../../../toolkit/NSM/extern/Calculix/bin/ccx_2.21 modal
-  ./../../../toolkit/NSM/extern/Calculix/bin/cgx -b shapes.fbl
+  ./../../../toolkit/MultiX/extern/Calculix/bin/cgx -b pre.fbl
+  ./../../../toolkit/MultiX/extern/Calculix/bin/ccx_2.21 modal
+  ./../../../toolkit/MultiX/extern/Calculix/bin/cgx -b shapes.fbl
 
 pre.fbl是cgx前处理建模脚本，通过cgx可以生成inp格式的网格文件all.msh。这里需要注意的是该算例会生成.gif动画文件，然后保存在 ``FENGSim/starter/ccx/Mesh1/Refs`` 目录中。
 算例的运行可以直接执行上面的命令，也可以运行test.py脚本，但是由于可执行程序目录不一定是test.py脚本中的默认目录，脚本运行会有问题，另外test.py脚本自动创建了Refs目录，
@@ -64,11 +64,11 @@ pre.fbl是cgx前处理建模脚本，通过cgx可以生成inp格式的网格文�
 前后处理
 **********************
 
-CalculiX前处理文件就是Abaqus的inp格式，后处理有一个python的模块，名字叫做ccx2paraview，可以将CalculiX自己的frd格式转成vtk或者vtu，在 ``FENGSim/toolkit/NSM/extern/Calculix/ccx2paraview`` 目录下的README.md中有ccx2paraview的使用介绍，可以按照如下命令操作。 ::
+CalculiX前处理文件就是Abaqus的inp格式，后处理有一个python的模块，名字叫做ccx2paraview，可以将CalculiX自己的frd格式转成vtk或者vtu，在 ``FENGSim/toolkit/MultiX/extern/Calculix/ccx2paraview`` 目录下的README.md中有ccx2paraview的使用介绍，可以按照如下命令操作。 ::
 
   cd FENGSim/starter/ccx/Mesh1
-  python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtu
-  python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtk
+  python3 ./../../../toolkit/MultiX/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtu
+  python3 ./../../../toolkit/MultiX/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtk
 
 .. image:: fig/ccx_1.gif
    :scale: 50 %
@@ -171,9 +171,9 @@ configure_modal.xml是.xml格式配置文件，all.msh是Gmsh生成的.inp格式
   
   cd FENGSim/starter/ccx/beam
   mkdir Refs
-  ./../../../toolkit/NSM/extern/Calculix/bin/ccx_2.21 modal
-  ./../../../toolkit/NSM/extern/Calculix/bin/cgx -b shapes.fbl
-  python3 ./../../../toolkit/NSM/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtk
+  ./../../../toolkit/MultiX/extern/Calculix/bin/ccx_2.21 modal
+  ./../../../toolkit/MultiX/extern/Calculix/bin/cgx -b shapes.fbl
+  python3 ./../../../toolkit/MultiX/extern/Calculix/ccx2paraview/ccx2paraview.py modal.frd vtk
 
 .. image:: fig/ccx/beam.gif
    :scale: 50 %
