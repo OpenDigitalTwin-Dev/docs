@@ -11,6 +11,7 @@ BUILDDIR      = build
 # Put it first so that "make" without argument is like "make help".
 
 all:
+	rm -rf build
 	sphinx-build -M html "$(SOURCEDIR)" "$(BUILDDIR)"
 
 help:
