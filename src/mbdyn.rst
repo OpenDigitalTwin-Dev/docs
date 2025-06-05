@@ -45,7 +45,7 @@ The second file (mov) will contain Nnodes by Ntimesteps lines formatted as:
 * the three components of the velocity of the node
 * the three components of the angular velocity of the node
 
-.. image:: fig/crank_slider.webm
-   :scale: 50 %
+.. image:: fig/crank_slider.gif
+   :width: 640
    :alt: alternate text
    :align: center    
