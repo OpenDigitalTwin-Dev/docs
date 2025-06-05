@@ -24,6 +24,7 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
    mbdyn
    ros2
    karamelo
+   lammps
    geometry
    sphinx
 
