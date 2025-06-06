@@ -36,5 +36,5 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
 * 电磁
    * 静电，ZeroCharge（homogeneous Neumann BC），Ground（homogeneous Dirichlet BC），Terminal（Dirichlet BC为常数）
    * 静磁，PEC（homogeneous Dirichlet BC），PMC（homogeneous Neumann BC），SurfaceCurrent（Source Term），非线性
-* 多体
+* 多体动力学
    * crank slider
