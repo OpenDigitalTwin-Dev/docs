@@ -30,9 +30,11 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
 
 
 * 固体
-   * 模态，homogeneous Dirichlet BC，homogeneous Neumann BC，非均匀材料
+  * 模态，homogeneous Dirichlet BC，homogeneous Neumann BC，非均匀材料
 * 流体
-   * Euler方程，可压，vertex-centered
+  * Euler方程，可压，vertex-centered
 * 电磁
-   * 静电，ZeroCharge（homogeneous Neumann BC），Ground（homogeneous Dirichlet BC），Terminal（Dirichlet BC为常数）
-   * 静磁，PEC（homogeneous Dirichlet BC），PMC（homogeneous Neumann BC），SurfaceCurrent（Source Term），非线性
+  * 静电，ZeroCharge（homogeneous Neumann BC），Ground（homogeneous Dirichlet BC），Terminal（Dirichlet BC为常数）
+  * 静磁，PEC（homogeneous Dirichlet BC），PMC（homogeneous Neumann BC），SurfaceCurrent（Source Term），非线性
+* 多体
+  * crank slider
