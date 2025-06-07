@@ -51,14 +51,15 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }
 
+#    'version_selector': False,
+#    'flyout_display':'hidden',
+    
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'logo_only': False,
     'navigation_depth': 5,
     'style_nav_header_background': '#BFBFBF',
-    'display_version': True,
-    'version_selector': False,
-    'flyout_display':'hidden',
+    'display_version': True,   
     'prev_next_buttons_location':'top'
 }
 html_context = {}
