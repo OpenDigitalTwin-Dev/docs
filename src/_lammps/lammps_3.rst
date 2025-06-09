@@ -6,7 +6,7 @@
 
 LAMMPS提供了一系列示例案例帮助用户快速上手，参考 ``FENGSim/toolkit/Particles/lammps/examples`` 路径下 ``README`` 文件中的描述，您可以尝试一些简单的模拟任务，如裂纹扩展、流体流动、摩擦接触等。
 
-按照如下操作执行LAMMPS程序运行计算并输出dump文件及图片。
+按照如下操作，执行LAMMPS程序运行，计算并输出dump文件及图片。
 
 .. code-block:: bash
 
@@ -23,6 +23,5 @@ LAMMPS提供了一系列示例案例帮助用户快速上手，参考 ``FENGSim/
 .. image:: fig/crack.gif
     :align: center
 	    
-也可以生成一系列JPG或PPM图像文件，或者产生快照文件供VMD等可视化工具读取。然后可以看到从第0步到第5000步一共21张图片。
 
 
