@@ -4,7 +4,6 @@
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
       
    _maxima/maxima_1
    _maxima/maxima_2

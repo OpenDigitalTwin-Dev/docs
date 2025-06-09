@@ -4,16 +4,22 @@
 
 按照如下操作在FENGSim中编译安装Maxima。
 
-* 首先克隆FENGSim。 ::
-  
+* 首先克隆FENGSim。 
+
+.. code-block:: bash
+		
     git clone https://github.com/OpenDigitalTwin-Dev/FENGSim.git
   
-* 再将DAE克隆到 ``FENGSim/toolkit`` 路径下。 ::
+* 再将DAE克隆到 ``FENGSim/toolkit`` 路径下。
+
+.. code-block:: bash
   
     git submodule init
     git submodule update toolkit/DAE
     
-* 运行以下命令，在Ubuntu24.04下编译Maxima。 ::
+* 运行以下命令，在Ubuntu24.04下编译Maxima。
+
+.. code-block:: bash
   
     cd FENGSim/toolkit/DAE/maxima
     ./install   
