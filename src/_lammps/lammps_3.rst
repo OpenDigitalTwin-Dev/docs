@@ -22,6 +22,9 @@ LAMMPS提供了一系列示例案例，帮助用户快速上手，参考 ``FENGS
    
 .. image:: fig/crack.gif
     :align: center
+
+.. image:: fig/melt.gif
+    :align: center
 	    
 
 
