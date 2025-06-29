@@ -49,4 +49,9 @@ The second file (mov) will contain Nnodes by Ntimesteps lines formatted as:
 .. image:: fig/crank_slider.gif
    :width: 640
    :alt: alternate text
+   :align: center
+   
+.. image:: fig/ur3e.gif
+   :width: 640
+   :alt: alternate text
    :align: center    
