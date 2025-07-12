@@ -8,6 +8,6 @@
    ./runscript
    
 .. image:: fig/liggghts.gif
-   :scale: 50 %
+   :width: 640
    :alt: alternate text
    :align: center
