@@ -13,4 +13,9 @@
    :scale: 50 %
    :alt: alternate text
    :align: center
+
+
+.. image:: fig/ale.gif
+   :alt: alternate text
+   :align: center
 	   
