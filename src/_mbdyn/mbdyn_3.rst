@@ -26,4 +26,6 @@
     cd FENGSim/starter/mbdyn/robot
     ./run
 
-
+.. image:: fig/ur3e.gif
+   :alt: alternate text
+   :align: center    
