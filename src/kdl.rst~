@@ -1,11 +1,11 @@
 ######################
-Gmsh
+MBDyn
 ######################
 
 .. toctree::
    :maxdepth: 1
       
-   _gmsh/gmsh_1
-   _gmsh/gmsh_2
-   _gmsh/gmsh_3
-   _gmsh/gmsh_4
+   _mbdyn/mbdyn_1
+   _mbdyn/mbdyn_2
+   _mbdyn/mbdyn_3
+   _mbdyn/mbdyn_4

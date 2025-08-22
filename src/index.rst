@@ -30,7 +30,8 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
    liggghts
    dualsphysics
    maxima
-   geometry
+   gmsh
+   clipper
    sphinx
 
 
