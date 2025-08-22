@@ -66,8 +66,3 @@ The second file (mov) will contain Nnodes by Ntimesteps lines formatted as:
 * the three Euler-like angles that define the orientation of the node (following the 1, 2, 3 convention)
 * the three components of the velocity of the node
 * the three components of the angular velocity of the node
-
-.. image:: fig/ur3e.gif
-   :width: 640
-   :alt: alternate text
-   :align: center    
