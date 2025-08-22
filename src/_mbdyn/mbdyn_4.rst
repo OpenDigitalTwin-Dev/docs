@@ -9,10 +9,10 @@
 前处理文件为.mbd配置文件和.stl几何模型文件，对Universal Robot公司的UR3机械臂，.stl几何模型文件、原始cad文件和UR3E尺寸详细文档都在 ``FENGSim/starter/mbdyn/robot/`` 路径下
 ，这里注意原始cad文件和UR3E尺寸详细文档中有一个尺寸是对不上的。
 
-可以在 ``FENGSim/starter/mbdyn/robot/robot_arm.mbd`` 中设置5个关节角度，关节如下图。
+可以在 ``FENGSim/starter/mbdyn/robot/robot_arm.mbd`` 中设置5个关节角度约束。UR3机械臂6关节如下图，最后一个关节由于无执行端先忽略。
 
 .. image:: fig/mbdyn_2.png
-   :width: 320
+   :width: 200
    :alt: alternate text
    :align: center
 
@@ -53,11 +53,6 @@ scalar function是和时间相关的函数，关节角度可以随着时间变�
       1.0, 0.0,
       2.0, pi;
 
-.. image:: fig/ur3e.gif
-   :width: 640
-   :alt: alternate text
-   :align: center    
-
 =========================
 后处理文件
 =========================
@@ -72,7 +67,7 @@ The second file (mov) will contain Nnodes by Ntimesteps lines formatted as:
 * the three components of the velocity of the node
 * the three components of the angular velocity of the node
 
-.. image:: fig/crank_slider.gif
+.. image:: fig/ur3e.gif
    :width: 640
    :alt: alternate text
-   :align: center
+   :align: center    
