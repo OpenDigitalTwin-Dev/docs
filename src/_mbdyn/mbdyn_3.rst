@@ -2,6 +2,10 @@
 算例测试
 **********************
 
+===========
+算例一
+===========
+
 在 ``FENGSim/starter/mbdyn/free_falling`` 路径下有一个自由落体的简单例子，运行如下命令。 ::
   
     cd FENGSim/starter/mbdyn/free_falling
@@ -14,6 +18,9 @@
    :alt: alternate text
    :align: center    
 
+===========
+算例二
+===========
 在 ``FENGSim/starter/mbdyn/robot`` 路径下有UR3机械臂例子，运行如下命令。 ::
   
     cd FENGSim/starter/mbdyn/robot
