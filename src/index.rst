@@ -41,7 +41,7 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
    * 静电，ZeroCharge（homogeneous Neumann BC），Ground（homogeneous Dirichlet BC），Terminal（Dirichlet BC为常数）
    * 静磁，PEC（homogeneous Dirichlet BC），PMC（homogeneous Neumann BC），SurfaceCurrent（Source Term），非线性
 * 多体动力学
-   * 2自由度机械臂正逆运动学方程
-   * 2自由度机械臂动力学方程（拉格朗日力学）加末端执行器位置姿态约束（逆运动转为关节角度约束）
-   * 6自由度机械臂正逆运动学方程
-   * 6自由度机械臂动力学方程（拉格朗日力学）加末端执行器位置姿态约束（逆运动转为关节角度约束）
+   * 2自由度机械臂正逆运动学方程，关节角度和末端执行器位置姿态
+   * 2自由度机械臂正逆动力学方程，关节角度和关节力矩
+   * 6自由度机械臂正逆运动学方程，关节角度和末端执行器位置姿态
+   * 6自由度机械臂正逆动力学方程，关节角度和关节力矩
