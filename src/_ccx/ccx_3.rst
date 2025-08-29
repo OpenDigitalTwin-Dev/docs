@@ -30,7 +30,7 @@ pre.fbl是cgx前处理建模脚本，通过cgx可以生成inp格式的网格文�
 
 计算得到的频率在 ``FENGSim/starter/ccx/Mesh1/`` 路径下的 ``modal.dat`` 文件中，.dat文件名字是按照.inp文件名字生成的，如下图蓝框中。
 
-.. image:: fig/ccx/frequency.png
+.. image:: _ccx/fig/frequency.png
    :scale: 50 %
    :alt: alternate text
    :align: center
