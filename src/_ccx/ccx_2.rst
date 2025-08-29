@@ -13,8 +13,8 @@
     cd FENGSim/toolkit
     git clone https://github.com/OpenDigitalTwin-Dev/MultiX.git
   
-* 在 ``FENGSim/toolkit/MultiX/extern/Calculix`` 中有一个install.sh脚本，直接运行该脚本可以在Ubuntu24.04下编译CalculiX和CalculiX GraphiX，无需其他操作。 ::
+* 在 ``FENGSim/toolkit/MultiX/extern/Calculix`` 中有一个install脚本，直接运行该脚本可以在Ubuntu24.04下编译CalculiX和CalculiX GraphiX，无需其他操作。 ::
   
     cd FENGSim/toolkit/MultiX/extern/Calculix
-    ./install.sh
+    ./install
     
