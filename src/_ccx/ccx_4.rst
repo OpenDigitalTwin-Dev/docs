@@ -27,7 +27,7 @@ Paraview查看模态动画
 	   
 首先用Paraview打开 ``FENGSim/starter/ccx/beam/`` 路径下的modal.08.vtk，
 点击Pipeline Browser里的modal.08.vtk，点击WarpByVector的按钮，该按钮对应工具栏中发生变形的图标，
-再点击Pipeline Browser里的modal.08.vtk，选择Filters里的Animate Modes，这里需要注意的是
+再点击Pipeline Browser里的modal.08.vtk，选择Filters里的Animate Modes。这里需要注意的是
 点击WarpByVector和选择Animate Modes之前一定要先点击modal.08.vtk，modal.08.vtk是数据源，
 其他操作是基于数据源操作，一定要先选择数据源。
 
