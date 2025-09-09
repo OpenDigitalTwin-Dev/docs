@@ -79,6 +79,13 @@ xml2inp.py的运行结果如下图，文件名称不用输入后缀名。
    :alt: alternate text
    :align: center
 
+运行以下命令。 ::
+  
+  cd FENGSim/starter/ccx/Mesh1
+  mkdir Refs
+  ./../../../toolkit/MultiX/extern/Calculix/bin/ccx_2.21 modal2
+  python3 ./../../../toolkit/MultiX/extern/Calculix/ccx2paraview/ccx2paraview.py modal2.frd vtk
+
 .. image:: fig/ccx_2.gif
    :scale: 50 %
    :alt: alternate text
