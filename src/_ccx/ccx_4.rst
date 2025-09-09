@@ -3,7 +3,7 @@
 **********************
 
 ==========================
-转VTK
+结果文件转VTK
 ==========================
 
 CalculiX前处理文件就是Abaqus的inp格式，后处理有一个python的模块，名字叫做ccx2paraview，可以将CalculiX自己的frd格式转成vtk或者vtu，在 ``FENGSim/toolkit/MultiX/extern/Calculix/ccx2paraview`` 目录下的README.md中有ccx2paraview的使用介绍，可以按照如下命令操作。 ::
@@ -84,6 +84,10 @@ xml2inp.py的运行结果如下图，文件名称不用输入后缀名。
    :scale: 50 %
    :alt: alternate text
    :align: center
+
+-----------------------
+带位移边界条件的xml转inp
+-----------------------
 
 上面例子是没有边界位移约束情况下的，如果添加位移约束，首先要在Gmsh中定义边界组，如下图，这里需要注意的是，即使不定义边界组，Gmsh导出.inp格式文件也会自动给单元集合命名。
 
