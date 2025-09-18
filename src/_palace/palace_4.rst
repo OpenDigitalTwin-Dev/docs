@@ -79,10 +79,8 @@ xml2json.py是原封不动将xml中字典格式转换为json，xml2json2.py是�
    :alt: alternate text
    :align: center
 
-在 ``FENGSim/starter/palace/examples/spheres/`` 路径下有两个例子，
-一个是原始Palace给的电容矩阵例子，xml和msh文件名称分别为configure_spheres.xml和spheres.msh，这个例子中用了Ground和Terminal的边界条件，
-另外一个是自定义的例子，xml和msh文件名称分别为configure_ex_3d.xml和ex_3d.msh，这个例子中测试了Ground、Terminal、ZeroCharge三种边界条件。
-这两个例子测试了xml2json2.py。
+在 ``FENGSim/starter/palace/examples/spheres/`` 路径下有两个例子。
+一个是原始Palace给的电容矩阵例子，xml和msh文件名称分别为configure_spheres.xml和spheres.msh，也可以用spheres2.msh。生成的data3.json和sphere.json区别是，data3.json是一阶单元，sphere.json是三阶单元。sphere.msh和sphere2.msh区别是，sphere.msh是三阶单元网格文件，sphere2.msh是一阶单元网格文件。这个例子中用了Ground和Terminal的边界条件。另外一个是自定义的例子，xml和msh文件名称分别为configure_ex_3d.xml和ex_3d.msh，这个例子中测试了Ground、Terminal、ZeroCharge三种边界条件。这两个例子测试了xml2json2.py。
 
 .. image:: fig/palace_3.png
    :scale: 50 %
