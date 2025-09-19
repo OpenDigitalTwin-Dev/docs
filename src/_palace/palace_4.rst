@@ -4,9 +4,9 @@
 
 Palace前后处理文件比较简单，网格剖分采用Gmsh，在 ``FENGSim/starter/palace/examples/spheres/mesh`` 目录下，mesh.jl文件是Gmsh网格剖分操作，通过Julia接口操作，spheres.msh是生成的网格文件。在 ``FENGSim/starter/palace/examples/spheres/`` 目录下spheres.json文件中定义了物理模型以及解法器。在 ``FENGSim/starter/palace/examples/spheres/postpro`` 目录下是生成的结果文件， ``FENGSim/starter/palace/examples/spheres/postpro/paraview`` 目录下是生成的vtk文件。
 
---------------------
+==========================
 网格文件
---------------------
+==========================
 
 Palace原始例子中给的网格文件spheres.msh是高阶有限元用的，在 ``FENGSim/starter/palace/examples/spheres/`` 目录下有一个spheres.geo文件，这个文件是gmsh建模的脚本，可以用gmsh打开spheres.geo，然后剖分得到一阶有限元的网格文件spheres2.msh，保存到 ``FENGSim/starter/palace/examples/spheres/mesh`` 目录下。这里需要注意的是，用Gmsh图形用户界面导出.msh文件时候，会弹出如下图对话框，不要选中Save all elements，否则Physical Groups的编号无法导出到.msh文件中。
 
@@ -63,9 +63,9 @@ Gmsh的msh网格文件介绍可以在 `<https://web.mit.edu/gmsh_v3.0.1/gmsh.pdf
 
 MeshFormat保持不变。PhysicalNames中定义了4个物理定义，其中3个边界和1个区域，首先给出物理定义个数为4，之后到结束关键字，第1列是维数，第2列是编号，例如farfield、sphere_a和sphere_b的维数是2，domain的维数是3。Elements中定义了边界面网格单元和体网格单元，首先给出单元个数为11317，之后到结束关键字，第2列是单元类型，例如21为10节点3阶三角形单元，29为20节点3阶四面体单元，可以在106页和107页找到，第4列对应了PhysicalNames中的编号，第5列为网格单元集合编号，集合编号按照点、线、面、实体分类编号，spheres.msh例子中有三个面，编号分别为1、2、3，有一个实体，编号为3。整个文件可以用Gmsh图形用户界面操作获得，需要选择保存成msh格式，再次选择Version 2 ASCII，目前Gmsh有新的网格格式Version 4 ASCII。
 
---------------------
+==========================
 配置文件
---------------------
+==========================
 
 求解器：
 
