@@ -2,8 +2,6 @@
 Palace
 ######################
 
-.. Hidden TOCs
-
 .. toctree::
    :maxdepth: 1
    :hidden:
