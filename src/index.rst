@@ -30,6 +30,7 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
    liggghts
    dualsphysics
    damask
+   exaca
    maxima
    gmsh
    clipper
