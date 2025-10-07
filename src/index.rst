@@ -36,7 +36,9 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
    clipper
    maxima
    r
+   geant4
    sphinx
+   template
 
 
 * 固体
