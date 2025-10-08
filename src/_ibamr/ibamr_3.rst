@@ -31,3 +31,5 @@
    :scale: 50 %
    :alt: alternate text
    :align: center
+
+这里需要注意结果要用visit软件打开。
