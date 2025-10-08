@@ -32,4 +32,4 @@
    :alt: alternate text
    :align: center
 
-这里需要注意结果要用visit软件打开。
+这里需要注意结果要用VisIt软件打开。
