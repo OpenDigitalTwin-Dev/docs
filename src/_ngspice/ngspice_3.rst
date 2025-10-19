@@ -19,6 +19,7 @@
    :align: center
 
 会打开如下结果可视化窗口。
+
 .. image:: fig/2.png
    :scale: 50 %
    :alt: alternate text

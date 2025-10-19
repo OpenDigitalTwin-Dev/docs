@@ -33,12 +33,12 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
    damask
    exaca
    openphase
+   geant4
+   ngspice
    gmsh
    clipper
    maxima
    r
-   geant4
-   ngspice
    sphinx
    template
 
