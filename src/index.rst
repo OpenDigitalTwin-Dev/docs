@@ -38,6 +38,7 @@ SDK下载地址为 `<https://github.com/OpenDigitalTwin-Dev/FENGSim>`_ ，网站
    maxima
    r
    geant4
+   ngspice
    sphinx
    template
 
