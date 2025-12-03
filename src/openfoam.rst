@@ -68,6 +68,20 @@ solvers里是求解器，通过solvers调用modules里的模块，见User Guide�
    :alt: alternate text
    :align: center
 
+AdditiveFoam中熔池计算。
+	   
+.. image:: fig/heat.gif
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+	   
+.. image:: fig/marangoni.gif
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
+
+
+
 
 	   
 **********************
